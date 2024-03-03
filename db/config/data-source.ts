@@ -8,11 +8,11 @@ const database_type: any = process.env.DATABASE_TYPE;
 export const dataSourceOptions: DataSourceOptions = {
     type: database_type,
     host: process.env.DATABASE_HOST,
-    port: Number(process.env.DATABASE_PORT),
+    // port: Number(process.env.DATABASE_PORT),
     username: process.env.DATABASE_USERNAME,
     password: process.env.DATABASE_PASSWORD,
     database: process.env.DATABASE_NAME,
-    synchronize: false,
+    synchronize: true,
     entities: ['dist/src/**/*.entity.{js,ts}'],
     migrations: ['dist/db/migrations/*{.ts,.js}'],
   };
